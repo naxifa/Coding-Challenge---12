@@ -56,8 +56,8 @@ canvas.addEventListener("mouseout", () => {
 // Task 3 
 // Function to draw the selected shape based on mouse coordinates
 function drawShape(mouseX, mouseY) {
-    const selectedShape = getSelectedShape(); // Retrieve the currently selected shape
-    const color = colorPicker.value; // Retrieve selected color
+    const selectedShape = getSelectedShape(); 
+    const color = colorPicker.value; 
 
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
@@ -68,7 +68,7 @@ function drawShape(mouseX, mouseY) {
         ctx.lineTo(mouseX, mouseY); // End line at current mouse position
 
     } else if (selectedShape === "rectangle") {
-        ctx.rect(startX, startY, mouseX - startX, mouseY - startY); // Draw rectangle
+        ctx.rect(startX, startY, mouseX - startX, mouseY - startY); 
 
     } else if (selectedShape === "circle") {
         const radius = Math.sqrt(Math.pow(mouseX - startX, 2) + Math.pow(mouseY - startY, 2));
